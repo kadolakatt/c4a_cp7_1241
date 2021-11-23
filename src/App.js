@@ -38,10 +38,9 @@ function App() {
 
   //Eliminar del vector de proyectos el proyecto con el id dado.
   const eliminarProyecto = function (id) {
-    const nuevosProyectos = [...lista_datos];
-    const nuevosProyectos2 = nuevosProyectos.find( (p) => p.id !== id);
-    console.log(nuevosProyectos2);
-    setListaDatos(nuevosProyectos2);
+    const nuevosProyectos = lista_datos.filter( (p) => p.id !== id);
+    console.log(nuevosProyectos);
+    setListaDatos(nuevosProyectos);
   }
 
   const datos_empresa = {
